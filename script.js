@@ -32,11 +32,11 @@ function highlightSearchText(fullString) {
 
   const words = searchText.split(' ').filter(word => word);
   console.log(highlightedString);
-  // Loop through eac h word and apply highlighting if not already highlighted
+  // Loop through each word and apply highlighting if not already highlighted
   words.forEach(word => {
-    const regex = new RegExp(`(${word})`, 'gi');
-    highlightedString = highlightedString.replace(regex, `<>$1</>`);
-    console.log(highlightedString);
+      const regex = new RegExp(`(${word})`, 'gi');
+      highlightedString = highlightedString.replace(regex, `<>$1</>`);
+      console.log(highlightedString);
   });
 
   highlightedString = removeNestedTags(highlightedString);
